@@ -8,7 +8,7 @@ class Show extends React.Component {
             backgroundColor: 'green'
         };
         
-        const { pokemon } = this.props;
+        const pokemon = this.props.pokemon
        function caps(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
        }

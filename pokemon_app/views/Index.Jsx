@@ -18,11 +18,11 @@ const React = require('react');
             <div > 
                 <h1>See All The Pokemon!</h1>
                 <ul> 
-                    {pokemons.map((pokemon, i) =>{
+                    {pokemons.map((pokemon) =>{
                         return(
                             <li> 
                                 This{' '}
-                               <a href ={`/pokemon/x/${i}`} >
+                               <a href ={`/pokemon/x/${pokemon.id}`} >
                                {caps(pokemon.name)}
                                </a>
                                 {' '}

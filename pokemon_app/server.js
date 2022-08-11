@@ -1,11 +1,15 @@
 
 const express = require('express');
+const mongoose = require('mongoose')
 const pokemons = require('./models/pokemon');
 require('dotenv').config();
 const pokemon = require('./models/pokemon')
 const app = express();
 const port = process.env.PORT || 3003;
 
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connection.once('open', ()=>{
+    console.log('connected to mongo')})
 
 
 app.use(express.urlencoded({extended:false}))

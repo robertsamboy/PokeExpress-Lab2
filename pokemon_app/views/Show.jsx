@@ -17,8 +17,8 @@ class Show extends React.Component {
             <body style={design}>
             <div > 
                 <h1>Gotta Catch Em' All!</h1>
-                <h2> {caps(pokemon.name)}</h2>
-                <img href src= {`http://img.pokemondb.net/artwork/${pokemon.name}.jpg`}></img>
+                <h2> {(pokemon.name)}</h2>
+                <img href src= {`http://img.pokemondb.net/artwork/${pokemon.name.toLowerCase()}.jpg`}></img>
                 <br></br>
                 <a href={`/pokemon/`}>back</a>
                 

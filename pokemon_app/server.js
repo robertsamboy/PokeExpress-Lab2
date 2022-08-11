@@ -44,15 +44,18 @@ app.post('/pokemon/', (req,res)=>{
 })
 
 app.post('/pokemon/x/', (req,res)=>{
+    
     res.render('Show',{pokemons:pokemons})    
 })
 
-app.get('/pokemon/x/:input',(req,res)=>{
-    res.render('Show',{pokemon:pokemons[req.params.input]}) 
+app.get('/pokemon/x/:id',(req,res)=>{
+    Pokemon.findById(req.params.id, (err, foundPokemon)=>{
+        res.render('Show', {pokemon: foundPokemon})
+    })
 })
 
-app.get('/pokemon/:id', (req,res)=>{
-    res.render('Show',{pokemon: pokemons[req.params.id]})
+app.get('/pokemon/:input', (req,res)=>{
+    res.render('Show',{pokemon: pokemons[req.params.input]})
 })
 
 app.listen(port,() => {

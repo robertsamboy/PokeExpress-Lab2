@@ -25,6 +25,7 @@ app.get('/',(req,res)=>{
 
 // app.get('/pokemon/',(req,res)=>{
 //         res.render('Index', {pokemons:pokemons})
+        
       
 // })
     app.get('/pokemon/',(req,res)=>{

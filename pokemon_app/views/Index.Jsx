@@ -36,7 +36,7 @@ const React = require('react');
                 
                     })}
                 </ul>
-                
+                <nav> <a href = '/pokemon/new'> Create Pokemon</a></nav>
             </div>
            
             </body>
